@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Where is my BUS logo">
+  <title>Where is my BUS</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181B"/>
+      <stop offset="100%" stop-color="#27272A"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#059669"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+  <circle cx="390" cy="122" r="46" fill="#10B981" opacity="0.24"/>
+  <circle cx="390" cy="122" r="22" fill="#10B981"/>
+  <rect x="116" y="116" width="280" height="268" rx="44" fill="url(#emerald)"/>
+  <rect x="142" y="146" width="228" height="106" rx="20" fill="#18181B"/>
+  <rect x="166" y="92" width="180" height="24" rx="12" fill="#34D399"/>
+  <circle cx="174" cy="322" r="22" fill="#FEF08A"/>
+  <circle cx="338" cy="322" r="22" fill="#FEF08A"/>
+  <rect x="216" y="314" width="80" height="16" rx="8" fill="#064E3B"/>
+  <rect x="150" y="384" width="44" height="36" rx="12" fill="#94A3B8"/>
+  <rect x="318" y="384" width="44" height="36" rx="12" fill="#94A3B8"/>
+</svg>

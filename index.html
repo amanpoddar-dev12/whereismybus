@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="theme-color" content="#F1F5F9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Where is my BUS" />
+    <meta
+      name="description"
+      content="Where is my BUS — Real-time bus number tracking, live GPS stop timelines, multi-modal route planning, saved favorite routes, and digital QR passes."
+    />
+    <meta property="og:title" content="Where is my BUS — Real-Time Transit & Live Bus Tracker" />
+    <meta
+      property="og:description"
+      content="Track any bus by number in real time, view live GPS position and stop-by-stop ETAs, bookmark favorite routes, and plan transit journeys."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icon.svg" />
+    <title>Where is my BUS — Real-Time Transit &amp; Live Bus Tracker</title>
+    <script>
+      (function () {
+        try {
+          var pref = localStorage.getItem('wimb_theme_preference') || 'light';
+          var isDark =
+            pref === 'dark' ||
+            (pref === 'system' &&
+              window.matchMedia &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+            var metaDark = document.querySelector('meta[name="theme-color"]');
+            if (metaDark) metaDark.setAttribute('content', '#09090B');
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+            var metaLight = document.querySelector('meta[name="theme-color"]');
+            if (metaLight) metaLight.setAttribute('content', '#F1F5F9');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-canvas text-zinc-900 dark:text-zinc-100 antialiased selection:bg-zinc-900 selection:text-white dark:selection:bg-emerald-500 dark:selection:text-zinc-950 overflow-x-hidden">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
